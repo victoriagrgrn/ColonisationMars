@@ -1,5 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Привет, {{ username }}!</h1>
+    <meta charset="UTF-8">
+    {% if 'строитель' in prof or 'инженер' in prof %}
+
+        <h2 align="center">Инженерные тренажеры</h2>
+        <img src="/static/img/engineers_scheme.png" alt="тут должна быть картинка">
+
+    {% else %}
+
+        <h2 align="center">Научные симуляторы</h2>
+        <img src="/static/img/scientists_scheme.png" alt="тут должна быть картинка">
+
+    {% endif %}
+
 {% endblock %}
